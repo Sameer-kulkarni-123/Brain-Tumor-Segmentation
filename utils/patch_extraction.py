@@ -7,7 +7,7 @@ def extract_all_patches_from_one_brain_scan(input_paths, patch_size=33):
   pass
 
 
-def extract_patch_and_label_from_one_brain_scan(input_paths, mask_path, patch_size=33, num_patches=10000):
+def extract_patch_and_label_from_one_brain_scan(input_paths, mask_path, patch_size=33, num_patches=20000):
   """
     It extracts the patches from one singular brain scan which includes all the four modalites and the labels assosiated with it
   """

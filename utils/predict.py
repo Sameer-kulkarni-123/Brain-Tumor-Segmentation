@@ -20,7 +20,7 @@ def predict_one_brain_scan(model, input_paths, patch_size=33, stride=4):
         patch = np.transpose(patch, (1, 2, 0))
         patches.append(patch)
         coords.append((z, y, x))
-        print("coords ==== ", z, y, x)
+        # print("coords ==== ", z, y, x)
   
   patches = np.array(patches)
 
@@ -53,7 +53,7 @@ def predict_one_slice(model, input_paths, patch_size=33, stride=1):
         patch = np.transpose(patch, (1, 2, 0))
         patches.append(patch)
         coords.append((z, y, x))
-        print("coords ==== ", z, y, x)
+        # print("coords ==== ", z, y, x)
   
   patches = np.array(patches)
 
