@@ -19,8 +19,8 @@ def extract_patch_and_label_from_one_brain_scan(input_paths, mask_path, patch_si
   np.random.shuffle(tumor_coords)
   np.random.shuffle(background_coords)
   min_num = min(len(tumor_coords), len(background_coords), num_patches)
-  coords = np.vstack([tumor_coords[:5000], background_coords[:20*min_num]])
-  # coords = np.stack([tumor_coords[:5000], background_coords[:20000]])
+  # coords = np.vstack([tumor_coords[:5000], background_coords[:20*min_num]])
+  coords = np.vstack([tumor_coords[:5000], background_coords[:50000]])
   np.random.shuffle(coords)
 
   half = patch_size//2
