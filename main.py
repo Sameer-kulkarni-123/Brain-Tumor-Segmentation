@@ -16,7 +16,7 @@ c_paths = {
 
 colab_paths = {
   "rawData" : r"",
-  "preprocessedData" : r"/content/drive/MyDrive/FDL_Project/preprocessedData",
+  "preprocessedData" : r"/content/Brain-Tumor-Segmentation/preprocessedData",
   "patches_npy_path" : r"/content/Brain-Tumor-Segmentation/results/patches.npy",
   "labels_npy_path" : r"/content/Brain-Tumor-Segmentation/results/labels.npy",
   "model_save_path" : r"/content/Brain-Tumor-Segmentation/models/model_v02.keras",
@@ -52,7 +52,7 @@ def preprocessing():
 def training(trainingDataPath):
   extract_patches(trainingDataPath)
 
-  model = train_model(patches_input_path=wsl_paths["patches_npy_path"], labels_input_path=wsl_paths["labels_npy_path"])
+  model = train_model(patches_input_path=colab_paths["patches_npy_path"], labels_input_path=wsl_paths["labels_npy_path"])
   save_model(model,colab_paths["model_save_path"])
 
 def predict():
