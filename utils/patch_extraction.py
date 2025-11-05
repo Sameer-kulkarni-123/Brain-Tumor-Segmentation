@@ -40,9 +40,9 @@ def extract_patch_and_label_from_one_brain_scan(input_paths, mask_path, patch_si
 
   return np.array(patches), np.array(labels)
 
-def extract_patches(trainingData:str,  ):
-  results_labels_output_folder_path = r"/mnt/c/Users/Sameer/MyProjects/BrainTumorSegmentation/results"
-  results_patches_output_folder_path = r"/mnt/c/Users/Sameer/MyProjects/BrainTumorSegmentation/results"
+def extract_patches(trainingData:str,results_output_folder_path):
+  # results_labels_output_folder_path = r"/mnt/c/Users/Sameer/MyProjects/BrainTumorSegmentation/results"
+  # results_patches_output_folder_path = r"/mnt/c/Users/Sameer/MyProjects/BrainTumorSegmentation/results"
   all_patches = []
   all_labels = []
   for type in os.listdir(trainingData):
@@ -90,8 +90,8 @@ def extract_patches(trainingData:str,  ):
   npArrPatches = np.concatenate(all_patches)
   print("npArrayLabels shape =======", npArrLabels.shape)
   print("npArrayPatches shape =======", npArrPatches.shape)
-  np.save(os.path.join(results_labels_output_folder_path, "labels.npy"), npArrLabels)
-  np.save(os.path.join(results_patches_output_folder_path, "patches.npy"), npArrPatches)
+  np.save(os.path.join(results_output_folder_path, "labels.npy"), npArrLabels)
+  np.save(os.path.join(results_output_folder_path, "patches.npy"), npArrPatches)
 
 
       # return #temp return to stop full execution
