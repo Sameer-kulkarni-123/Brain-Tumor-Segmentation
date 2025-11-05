@@ -53,7 +53,7 @@ def preprocessing():
 def training(trainingDataPath):
   extract_patches(trainingDataPath,colab_paths["results_output_folder_path"] )
 
-  model = train_model(patches_input_path=colab_paths["patches_npy_path"], labels_input_path=wsl_paths["labels_npy_path"])
+  model = train_model(patches_input_path=colab_paths["patches_npy_path"], labels_input_path=colab_paths["labels_npy_path"])
   save_model(model,colab_paths["model_save_path"])
 
 def predict():
